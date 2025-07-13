@@ -145,9 +145,7 @@ local Button = Tab:CreateButton({
 	Description = nil,
 
 	Callback = function()
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
+
 local StaminaModule = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
 
 StaminaModule.StaminaLossDisabled = true
@@ -158,7 +156,6 @@ task.spawn(function()
 		StaminaModule.StaminaChanged:Fire()
 	end
 end)
-
 
 		print("Button Pressed!")
 
