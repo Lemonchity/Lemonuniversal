@@ -6,9 +6,9 @@ local Luna = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebula-S
 
 local Window = Luna:CreateWindow({
 
-	Name = "Teri", -- This Is Title Of Your Window
+	Name = "TeriHub", -- This Is Title Of Your Window
 
-	Subtitle = "Thanks for execute", -- A Gray Subtitle next To the main title.
+	Subtitle = "Teriiii", -- A Gray Subtitle next To the main title.
 
 	LogoID = "82795327169782", -- The Asset ID of your logo. Set to nil if you do not have a logo for Luna to use.
 
@@ -16,7 +16,7 @@ local Window = Luna:CreateWindow({
 
 	LoadingTitle = "Luna Interface Suite", -- Header for loading screen
 
-	LoadingSubtitle = "by LemonHubOffical", -- Subtitle for loading screen
+	LoadingSubtitle = "by Nebula Softworks", -- Subtitle for loading screen
 
 
 
@@ -34,7 +34,7 @@ local Window = Luna:CreateWindow({
 
 	KeySettings = {
 
-		Title = "Teri hub key 1234",
+		Title = "TeriKey1234",
 
 		Subtitle = "Key System",
 
@@ -112,7 +112,7 @@ Window:CreateHomeTab({
 
 local Tab = Window:CreateTab({
 
-	Name = "Forsaken",
+	Name = "Tab Teri",
 
 	Icon = "view_in_ar",
 
@@ -126,7 +126,7 @@ local Tab = Window:CreateTab({
 
 Luna:Notification({
 
-	Title = "Teri hub offical",
+	Title = "TeriKey1234",
 
 	Icon = "notifications_active",
 
@@ -142,24 +142,11 @@ local Button = Tab:CreateButton({
 
 	Name = "INF stamina!",
 
-	Description = Gives infinite stamina,
+	Description = nil,
 
 	Callback = function()
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-local StaminaModule = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
 
-StaminaModule.StaminaLossDisabled = true
-task.spawn(function()
-	while true do
-		task.wait(0.1)
-		StaminaModule.Stamina = StaminaModule.MaxStamina
-		StaminaModule.StaminaChanged:Fire()
-	end
-end)
-
-		print("INF stamina Pressed!")
+		print("Button Pressed!")
 
 	end
 
@@ -169,9 +156,9 @@ end)
 
 local Toggle = Tab:CreateToggle({
 
-	Name = "in working",
+	Name = "Toggle fun",
 
-	Description = in working,
+	Description = nil,
 
 	CurrentValue = false,
 
@@ -193,7 +180,7 @@ Tab:CreateDivider()
 
 local Slider = Tab:CreateSlider({
 
-	Name = "Slider for fun",
+	Name = "Slider funn",
 
 	Range = {0, 200},
 
@@ -213,7 +200,7 @@ local Slider = Tab:CreateSlider({
 
 local ColorPicker = Tab:CreateColorPicker({
 
-	Name = "Color Picker",
+	Name = "Color Picker Example",
 
 	Color = Color3.fromRGB(86, 171, 128),
 
@@ -231,7 +218,7 @@ local ColorPicker = Tab:CreateColorPicker({
 
 local Input = Tab:CreateInput({
 
-	Name = "Dynamic Input just",
+	Name = "Dynamic Input Example",
 
 	Description = nil,
 
@@ -257,7 +244,7 @@ local Input = Tab:CreateInput({
 
 local Dropdown = Tab:CreateDropdown({
 
-	Name = "Dropdown Example",
+	Name = "Dropdown ",
 
 	Description = nil,
 
@@ -293,7 +280,7 @@ local Dropdown = Tab:CreateDropdown({
 
 local Bind = Tab:CreateBind({
 
-	Name = "Bind",
+	Name = "Bind ",
 
 	Description = nil,
 
@@ -349,7 +336,7 @@ local Label3 = Tab:CreateLabel({
 
 local Paragraph = Tab:CreateParagraph({
 
-	Title = "paragraph ",
+	Title = "Paragraph ",
 
 	Text = "This Is A Paragraph. You Can Type Very Long Strings Here And They'll Automatically Fit! This Counts As A Description Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text?"
 
@@ -390,4 +377,3 @@ local ConfigTab = Window:CreateTab({
 
 
 ConfigTab:BuildConfigSection()
-
