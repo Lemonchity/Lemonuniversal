@@ -3,10 +3,10 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/ma
 
 MakeWindow({
   Hub = {
-    Title = "Teri hub",
+    Title = "TeriHub",
     Animation = "by : LemonHubOffical"
   },
-  Key = 1234{
+  Key = {
     KeySystem = false,
     Title = "Key System",
     Description = "",
@@ -21,29 +21,10 @@ MakeWindow({
   }
 })
 
---[[
-  Hub = {
-    Title = "Teri Hub"
-    Animation = "by : LemonHubOffical"
-  },
-  Key =1234 {
-    KeySystem =
-    Title = "Key System"
-    Description = ""
-    KeyLink = ""
-    Keys = {"1234"}
-    Notifi = {
-      Notifications = true
-      CorrectKey = "Running the Script..."
-      Incorrectkey = "The key is incorrect"
-      CopyKeyLink = "Copied to Clipboard"
-    }
-  }
-]]
 
 
 MinimizeButton({
-  Image = "",
+  Image = "9579835676498500991581210180536602104911333761160051195510729455663101806287149895184382833296092511759293347117591930177220505725463251706357471276961164823743196762769581190268034711623459250108007483127554420585768370196684506013701110029306610085",
   Size = {40, 40},
   Color = Color3.fromRGB(10, 10, 10),
   Corner = true,
@@ -51,21 +32,10 @@ MinimizeButton({
   StrokeColor = Color3.fromRGB(255, 0, 0)
 })
 
---[[
-  Image = "https://images.app.goo.gl/TAtND5UeLBKqRry18"
-  Size = {40, 40}
-  Color = Color3.fromRGB(10, 10, 10)
-  Corner = true
-  Stroke = false
-  StrokeColor = Color3.fromRGB(255, 0, 0)
-]]
 
 
-local Main = MakeTab({Name = "Main"})
-
---[[
-  Name = "FTAP" <string> Tab name
-]]
+local Main = MakeTab({Name = "Main"}) Ftap MakeWindow({
+  Hub = {
 
 
 
@@ -75,16 +45,16 @@ AddButton(Main, {
     --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
+local StaminaModule = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
+
+StaminaModule.StaminaLossDisabled = true
+task.spawn(function()
+	while true do
+		task.wait(0.1)
+		StaminaModule.Stamina = StaminaModule.MaxStamina
+		StaminaModule.StaminaChanged:Fire()
+	end
+end)
+
   end
 })
-
---[[
-  Name = "Button Testing"
-  Callback = function()
-    -- --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
-  end
-]]
