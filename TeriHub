@@ -6,7 +6,7 @@ MakeWindow({
     Title = "Teri hub",
     Animation = "by : LemonHubOffical"
   },
-  Key = {
+  Key = 1234{
     KeySystem = false,
     Title = "Key System",
     Description = "",
@@ -26,7 +26,7 @@ MakeWindow({
     Title = "Teri Hub"
     Animation = "by : LemonHubOffical"
   },
-  Key = {
+  Key =1234 {
     KeySystem =
     Title = "Key System"
     Description = ""
