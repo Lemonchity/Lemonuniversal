@@ -1,0 +1,90 @@
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
+
+
+MakeWindow({
+  Hub = {
+    Title = "Teri hub",
+    Animation = "by : LemonHubOffical"
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = {"1234"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
+
+--[[
+  Hub = {
+    Title = "Teri Hub"
+    Animation = "by : LemonHubOffical"
+  },
+  Key = {
+    KeySystem =
+    Title = "Key System"
+    Description = ""
+    KeyLink = ""
+    Keys = {"1234"}
+    Notifi = {
+      Notifications = true
+      CorrectKey = "Running the Script..."
+      Incorrectkey = "The key is incorrect"
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+]]
+
+
+MinimizeButton({
+  Image = "",
+  Size = {40, 40},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 0, 0)
+})
+
+--[[
+  Image = "https://images.app.goo.gl/TAtND5UeLBKqRry18"
+  Size = {40, 40}
+  Color = Color3.fromRGB(10, 10, 10)
+  Corner = true
+  Stroke = false
+  StrokeColor = Color3.fromRGB(255, 0, 0)
+]]
+
+
+local Main = MakeTab({Name = "Main"})
+
+--[[
+  Name = "FTAP" <string> Tab name
+]]
+
+
+
+AddButton(Main, {
+  Name = "Button Testing",
+  Callback = function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
+  end
+})
+
+--[[
+  Name = "Button Testing"
+  Callback = function()
+    -- --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
+  end
+]]
