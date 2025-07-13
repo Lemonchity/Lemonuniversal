@@ -146,6 +146,17 @@ local Button = Tab:CreateButton({
 
 	Callback = function()
 
+local StaminaModule = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
+
+StaminaModule.StaminaLossDisabled = true
+task.spawn(function()
+	while true do
+		task.wait(0.1)
+		StaminaModule.Stamina = StaminaModule.MaxStamina
+		StaminaModule.StaminaChanged:Fire()
+	end
+end)
+
 		print("Button Pressed!")
 
 	end
@@ -316,7 +327,7 @@ local Label1 = Tab:CreateLabel({
 
 local Label2 = Tab:CreateLabel({
 
-	Text = "This is an Information Label",
+	Text = "This script made by me",
 
 	Style = 2
 
@@ -326,7 +337,7 @@ local Label2 = Tab:CreateLabel({
 
 local Label3 = Tab:CreateLabel({
 
-	Text = "This is a Warning Label",
+	Text = "if something patched contact my telegram @LemonSem",
 
 	Style = 3
 
