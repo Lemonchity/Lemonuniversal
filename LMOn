@@ -53,10 +53,7 @@ local Toggle = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1",
    Callback = function(Value)
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-getgenv().FOV = 140 
+getgenv().FOV = 100 
 getgenv().Enabled = true
 
 local players = game:GetService("Players")
