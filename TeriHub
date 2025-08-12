@@ -137,10 +137,19 @@ Luna:Notification({
 })
 
 
+local Button = Tab:CreateButton({
+
+	Name = "idk",
+
+	Description = nil,
+
+	Callback = function()
+
 
 local Button = Tab:CreateButton({
 
 	Name = "INF stamina!",
+
 
 	Description = nil,
 
