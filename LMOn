@@ -1,54 +1,53 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/Library.lua"))()
 
-local Window = Rayfield:CreateWindow({
-   Name = "LemonNewEra|BETA",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "loading",
-   LoadingSubtitle = "by LemonHubOffical",
-   ShowText = "LemonBETA", -- for mobile users to unhide rayfield, change if you'd like
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-
-   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
-
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
-
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "LemonBETA"
-   },
-
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Lemon🤞😔",
-      Subtitle = "key system",
-      Note = "Key is LemonHubBETA this is anti bot it changed every week", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"LemonHubBETA"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+local Window = Library:CreateWindow({
+    Title = "LemonHubNewEra|beta🤞😔",
+    Footer = "v1.0.0",
+    ToggleKeybind = Enum.KeyCode.RightControl,
+    Center = true,
+    AutoShow = true
 })
 
-local Tab = Window:CreateTab("breaking point", 109251560) -- Title, Image local Window = Rayfield:CreateWindow({
+local MainTab = Window:AddTab("Main", "home", "Main features")
+-- Second parameter is the optional icon name from lucide.dev, third is an optional description
 
-Rayfield:Notify({
-   Title = "This bets version",
-   Content = "if you get banned not my problem",
-   Duration = 6.5,
-   Image = 109251560,
+local UISettingsTab = Window:AddTab({
+    Name = "blox fruits the bests",
+    Description = "blox fruitsVerified✅scripts",
+    Icon = "settings"
 })
 
-local Button = Tab:CreateButton({
-   Name = "H4RN7 best",
-   Callback = function()
-   -- The function that takes place when the button is pressed
-   end,
+
+local LeftGroupbox = UISettingsTab:AddLeftGroupbox("Settings", "wrench")
+local RightGroupbox = UISettingsTab:AddRightGroupbox("Information", "info")
+
+local MyButton = LeftGroupbox:AddButton({
+    Text = "RedZ hub✅",
+    Func = function()
+local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+getgenv().BETA_VERSION = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
+        print("Action running!")
+    end
+})
+
+local UISettingsTab = Window:AddTab({
+    Name = "breaking point",
+    Description = "breaking point BEST scripts",
+    Icon = "settings"
+})
+
+local LeftGroupbox = UISettingsTab:AddLeftGroupbox("Settings", "wrench")
+local RightGroupbox = UISettingsTab:AddRightGroupbox("Information", "info")
+
+local MyButton = LeftGroupbox:AddButton({
+    Text = "H4RN7 best",
+    Func = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Obfuscated/master/Breaking%20Point%20H4R7N%20Hack.lua"))()
+        print("Running")
+    end
 })
