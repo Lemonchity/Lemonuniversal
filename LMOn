@@ -5,21 +5,22 @@
 local Library = loadstring(game:HttpGet('https://gist.githubusercontent.com/MjContiga1/5b9535166d60560ac884a871cb0dc418/raw/e7fdb16802d9486d8d04d3e41d3607d89e6b4a1b/Libsuck.lua'))()
 
 -- Create main window
-local window = Library:Window('LemonHub|Unnamed shooter'')
+local window = Library:Window('Example UI')
 
 -- Create tabs with icons replace ur own icon id
-local mainTab = window:Tab({"Crafting", "rbxassetid://7734022041"})
+local mainTab = window:Tab({"main", "rbxassetid://7734022041"})
+local localTab = window:Tab({"LocalPlayer", "rbxassetid://7743875962"})
+local settingsTab = window:Tab({"Info", "rbxassetid://7733673987"})
 
 -- Main Tab Elements
 mainTab:Label("Welcome to LemonHub")
 
 -- Button
-mainTab:Button('Click Me!', function()
-
+mainTab:Button('SilentAim', function()
 --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
-getgenv().FOV = 60
+getgenv().FOV = 60 
 getgenv().Enabled = true
 
 local players = game:GetService("Players")
@@ -33,7 +34,7 @@ local raycastModule = require(replicatedStorage.Events.Modules.RaycastModule)
 local fovCircle =  Drawing.new("Circle")
 fovCircle.Position = currentCamera.ViewportSize * 0.5
 fovCircle.Visible = true
-fovCircle.Color = Color3.fromRGB(0, 0, 255)
+fovCircle.Color = Color3.fromRGB(0, 0, 150)
 fovCircle.Radius = getgenv().FOV
 fovCircle.Transparency = 1
 fovCircle.Filled = false
@@ -78,26 +79,24 @@ for i, func in raycastModule do
         return closestPlayer.Head, closestPlayer.Head.Position, Vector3.zero
     end
 end
-
     print("Activating")
     game.StarterGui:SetCore("SendNotification", {
-        Title = "Notification";
-        Text = "Loading";
+        Title = "Made By";
+        Text = "LemonHubOffical Enjoy!";
         Duration = 3;
     })
 end)
 
 -- Button
-mainTab:Button('Walkspeed risky''', function()
+localTab:Button('Walkspeed50 risky', function()
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
-
 humanoid.WalkSpeed = 50
     print("Activating")
     game.StarterGui:SetCore("SendNotification", {
-        Title = "Notification";
-        Text ="Used";
+        Title = "Script Made By";
+        Text = "LemonHubOffical Enjoy!";
         Duration = 3;
     })
 end)
