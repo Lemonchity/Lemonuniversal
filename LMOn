@@ -88,7 +88,7 @@ end
 end)
 
 -- Button
-localTab:Button('Walkspeed50 risky', function()
+localTab:Button(walkspeed 50 risky', function()
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -98,5 +98,77 @@ humanoid.WalkSpeed = 50
         Title = "Script Made By";
         Text = "LemonHubOffical Enjoy!";
         Duration = 3;
+    })
+end)
+
+-- Button
+localTab:Button(High jump 150 risky', function()
+-- Скрипт высокого прыжка с Toggle (переключатель) для мобильного Roblox на Vega x mobile
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local UIS = game:GetService("UserInputService")
+
+local HIGH_JUMP_POWER = 150
+local NORMAL_JUMP_POWER = 50
+local isHighJumpEnabled = false
+
+local function setJumpPower(character, power)
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.JumpPower = power
+    end
+end
+
+local function toggleHighJump()
+    isHighJumpEnabled = not isHighJumpEnabled
+    local character = player.Character
+    if character then
+        if isHighJumpEnabled then
+            setJumpPower(character, HIGH_JUMP_POWER)
+            print("Высокий прыжок ВКЛЮЧЕН")
+        else
+            setJumpPower(character, NORMAL_JUMP_POWER)
+            print("Высокий прыжок ВЫКЛЮЧЕН")
+        end
+    end
+end
+
+-- Для мобильных устройств, в отсутствии клавиш, используем экранные кнопки через TouchTap
+-- Пример простой toggle с использованием двойного нажатия по экрану:
+
+local lastTap = 0
+local TAP_DELAY = 0.5 -- секунды между тапами
+
+UIS.TouchTap:Connect(function()
+    local currentTime = tick()
+    if currentTime - lastTap <= TAP_DELAY then
+        toggleHighJump()
+        lastTap = 0
+    else
+        lastTap = currentTime
+    end
+end)
+
+-- Автоматическое применение при смене персонажа
+
+player.CharacterAdded:Connect(function(character)
+    if isHighJumpEnabled then
+        setJumpPower(character, HIGH_JUMP_POWER)
+    else
+        setJumpPower(character, NORMAL_JUMP_POWER)
+    end
+end)
+
+-- Инициализация при старте
+
+if player.Character then
+    setJumpPower(player.Character, NORMAL_JUMP_POWER)
+end
+    print("Activating")
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Script Made By";
+        Text = "LemonHubOffical TO ACTIVATE USE DOUBLE TAP ON SCREEN!";
+        Duration = 9;
     })
 end)
