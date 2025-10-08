@@ -86,3 +86,18 @@ end
         Duration = 3;
     })
 end)
+
+-- Button
+mainTab:Button('Walkspeed risky''', function()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+humanoid.WalkSpeed = 50
+    print("Activating")
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Notification";
+        Text ="Used";
+        Duration = 3;
+    })
+end)
